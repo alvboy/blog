@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>个人网站</title>
+  </head>
+  <body>
+    <h1>个人网站 start</h1>
+    <button>点击发送请求</button>
+  </body>
+  <script>
+    $('button').click(function(){
+        $.post('http://www.liulongbin.top:3007/api/login',
+            { username: 'admin', password: '123456' },
+            function (data, status) {
+                console.log(status);
+                console.log(data);
+            }
+        );
+    })
+    
+  </script>
+</html>
